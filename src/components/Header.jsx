@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import { useSelector } from "react-redux";
 import { ShoppingCart } from "lucide-react";
 
 export default function Header() {
-  const [login, setLogin] = useState(false);
+  // const [login, setLogin] = useState(false);
   const cartItems = useSelector((store) => store.cart.items);
   const totalItems = cartItems.reduce((sum, item) => sum + item.qty, 0);
 
   // const handleLogin = () => setLogin(!login);
 
   return (
-    <div className="sticky top-0 z-10 bg-white w-full flex flex-row justify-between items-center sm:px-[11%] text-base sm:text-xl py-3 sm:py-4 mb-4 border-b-2 gap-32 sm:gap-0">
+    <div className="sticky top-0 z-10 bg-white w-full flex flex-row justify-between items-center px-14  sm:px-[11%] text-base sm:text-xl py-3 sm:py-4 mb-4 border-b-2 gap-36 sm:gap-0">
       {/* Logo */}
       <div className="flex justify-center sm:justify-start items-center w-full sm:w-auto gap-2">
         <img

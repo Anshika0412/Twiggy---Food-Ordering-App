@@ -1,11 +1,11 @@
 
 export default function Shimmer() {
   return (
-    <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pr-3">
       {Array(12).fill("").map((_, index) => (
         <div
           key={index}
-          className="h-[250px] w-[220px] p-1 m-4 rounded-lg shadow animate-pulse bg-white"
+          className="h-[250px] w-full p-1 m-1 rounded-lg shadow animate-pulse bg-white"
         >
           {/* Image placeholder */}
           <div className="h-[60%] w-full bg-gray-300 rounded-xl"></div>
@@ -13,10 +13,12 @@ export default function Shimmer() {
           {/* Text placeholders */}
           <div className="pl-4 mt-2 space-y-2">
             <div className="h-4 w-3/4 bg-gray-300 rounded"></div>
+
             <div className="flex gap-4">
               <div className="h-4 w-12 bg-gray-300 rounded"></div>
               <div className="h-4 w-16 bg-gray-300 rounded"></div>
             </div>
+
             <div className="h-3 w-5/6 bg-gray-300 rounded"></div>
             <div className="h-3 w-1/2 bg-gray-300 rounded"></div>
           </div>
@@ -25,6 +27,7 @@ export default function Shimmer() {
     </div>
   );
 }
+
 
 // export default function Shimmer() {
 //   return (
